@@ -1,5 +1,20 @@
 # JSScanner
 Js File Scanner
+This is Js File Scanner . Which are scan  in js file and  find juicy information Toke,Password Etc.
+
+##Installation :
+```
+git clone https://github.com/0x240x23elu/JSScanner.git
+cd JSScanner
+pip3 install -r  requirements.txt
+```
+
+## How to Use
+```
+python3 JSScanner.py
+Please Enter Js File: (Js file text file)
+```
+
 
 | Name | Type | Regex |
 | :---         |     :---:      |          ---: |
