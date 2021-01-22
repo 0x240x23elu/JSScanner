@@ -9,11 +9,24 @@ cd JSScanner
 pip3 install -r  requirements.txt
 ```
 
+## Note
+
+```
+If you Want to Add New Regex , Please check Regex in python regex checker . Regex File Regex.txt
+Output file bydefault output.txt
+```
+
 ## How to Use
 ```
 python3 JSScanner.py
 Please Enter Js File: (Js file text file)
 ```
+## Some Regex 
+```
+Thank you 
+```
+https://github.com/odomojuli
+https://github.com/odomojuli/RegExAPI
 
 
 | Name | Type | Regex |
