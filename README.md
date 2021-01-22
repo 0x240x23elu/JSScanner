@@ -17,6 +17,10 @@ Output file bydefault output.txt
 ```
 
 ## How to Use
+
+```
+echo "exaple.com" | waybackurls | grep -iE '\.js'|grep -ivE '\.json'|sort -u  > j.txt
+```
 ```
 python3 JSScanner.py
 Please Enter Js File: (Js file text file)
