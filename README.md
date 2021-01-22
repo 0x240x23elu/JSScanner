@@ -1,6 +1,6 @@
 # JSScanner
 Js File Scanner
-| Name     | Character |
+| Name     | Regext |
 | ---      | ---       |
 | Backtick | `         |
 | Pipe     | \|        |
