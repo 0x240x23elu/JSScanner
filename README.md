@@ -2,7 +2,7 @@
 Js File Scanner
 This is Js File Scanner . Which are scan  in js file and  find juicy information Toke,Password Etc.
 
-##Installation :
+## Installation :
 ```
 git clone https://github.com/0x240x23elu/JSScanner.git
 cd JSScanner
@@ -20,11 +20,28 @@ Output file bydefault output.txt
 
 ```
 echo "example.com" | waybackurls | grep -iE '\.js'|grep -ivE '\.json'|sort -u  > j.txt
+or
+echo "example.com" | waybackurls | httpx > live.txt
+
 ```
 ```
 python3 JSScanner.py
 Please Enter Js File: (Js file text file)
 ```
+## Open redirect 
+
+```
+ Now JSScanner fetch open redirect param from Live site
+ Copy Below Regex in Regex.txt
+ 
+ (next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)(([\w.-]*)\.([\w]*)\.([A-z]))\w+
+ 
+(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)(http|https)
+
+(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+
+
+```
+
 ## Some Regex 
 ```
 Thank you 
