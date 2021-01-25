@@ -82,9 +82,9 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (amazonaws|AMAZONAWS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (apiSecret|APISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (api_key|API_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(api_secret|API_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(api_secret|API_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (apidocs|APIDOCS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(apikey|APIKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(apikey|APIKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (app_key|APP_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (app_secret|APP_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (appkey|APPKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -97,8 +97,8 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (authorizationToken|AUTHORIZATIONTOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (aws_access|AWS_ACCESS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (aws_access_key_id|AWS_ACCESS_KEY_ID)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(aws_key|AWS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(aws_secret|AWS_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(aws_key|AWS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
+(aws_secret|AWS_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]7}
 (aws_token|AWS_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (bashrcpassword|BASHRCPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (bucket_password|BUCKET_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -108,7 +108,7 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (config|CONFIG)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (conn.login|CONN.LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (connectionstring|CONNECTIONSTRING)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(consumer_key|CONSUMER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(consumer_key|CONSUMER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (credentials|CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (database_password|DATABASE_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (db_password|DB_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -118,13 +118,13 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (dbuser|DBUSER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{3}
 (dot-files|DOT-FILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (dotfiles|DOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(encryption_key|ENCRYPTION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(encryption_key|ENCRYPTION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (fabricApiSecret|FABRICAPISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (fb_secret|FB_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (firebase|FIREBASE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (ftp|FTP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (gh_token|GH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(github_key|GITHUB_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(github_key|GITHUB_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (github_token|GITHUB_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (gitlab|GITLAB)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (gmail_password|GMAIL_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -133,14 +133,14 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (herokuapp|HEROKUAPP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (internal|INTERNAL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (irc_pass|IRC_PASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(key|KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(key|KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (keyPassword|KEYPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (ldap_password|LDAP_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (ldap_username|LDAP_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (login|LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (mailchimp|MAILCHIMP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (mailgun|MAILGUN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(master_key|MASTER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(master_key|MASTER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (mydotfiles|MYDOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (mysql|MYSQL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (node_env|NODE_ENV)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -152,7 +152,7 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (passwords|PASSWORDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (pemprivate|PEMPRIVATE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (preprod|PREPROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(private_key|PRIVATE_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(private_key|PRIVATE_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (prod|PROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (pwd|PWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (pwds|PWDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -161,15 +161,14 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (root_password|ROOT_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (secret|SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (secret.password|SECRET.PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secret_access_key|SECRET_ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secret_key|SECRET_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(secret_access_key|SECRET_ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
+(secret_key|SECRET_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (secret_token|SECRET_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (secrets|SECRETS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (secure|SECURE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (security_credentials|SECURITY_CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(send.keys|SEND.KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(send.keys|SEND.KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
 (send_keys|SEND_KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(sendkeys|SENDKEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (sf_username|SF_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (slack_api|SLACK_API)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (slack_token|SLACK_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
@@ -183,3 +182,6 @@ ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 (stripe|STRIPE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (swagger|SWAGGER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
 (testuser|TESTUSER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)(([\w.-]*)\.([\w]*)\.([A-z]))\w+
+(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)(http|https)
+(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+
