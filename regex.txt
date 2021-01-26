@@ -6,10 +6,10 @@ virustotal[_-]?apikey(=| =|:| :)
 TOKEN[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
 xoxb-[0-9A-Za-z\\-]{50}
 xoxp-[0-9A-Za-z\\-]{71}
-token=[0-9A-Za-z\\-]{7}
+token=[0-9A-Za-z\\-]{5,100}
 [0-9a-f]{32}-us[0-9]{1,2}
 AIza[0-9A-Za-z\\-_]{35}
-AAAA[a-zA-Z0-9_-]{7}:[a-zA-Z0-9_-]{140}
+AAAA[a-zA-Z0-9_-]{5,100}:[a-zA-Z0-9_-]{140}
 (ftp|ftps|http|https)://[A-Za-z0-9-_:\.~]+(@)
 (API|api)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{10}
 (token|TOKEN)(:|=| : | = )("|')[ 0-9A-Za-z\\-]{10}
@@ -50,7 +50,7 @@ SK[0-9a-fA-F]{32}
 (?i)twitter(.{0,20})?['\"][0-9a-z]{18,25}
 [t|T][w|W][i|I][t|T][t|T][e|E][r|R].{0,30}['\"\\s][0-9a-zA-Z]{35,44}['\"\\s]
 (?i)twitter(.{0,20})?['\"][0-9a-z]{35,44}
-AAAA[A-Za-z0-9_-]{7}:[A-Za-z0-9_-]{140}
+AAAA[A-Za-z0-9_-]{5,100}:[A-Za-z0-9_-]{140}
 6L[0-9A-Za-z-_]{38}|^6[0-9a-zA-Z_-]{39}$
 ya29\.[0-9A-Za-z\-_]+
 amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
@@ -61,7 +61,7 @@ s3-[a-zA-Z0-9-\.\_\/]
 s3.amazonaws.com/[a-zA-Z0-9-\.\_]
 basic [a-zA-Z0-9=:_\+\/-]{5,100}
 bearer [a-zA-Z0-9_\-\.=:_\+\/]{5,100}
-api[key|_key|\s+]+[a-zA-Z0-9_\-]{5,100}
+api[key|_key|\s+]+[a-zA-Z0-9_\-]{7,100}
 key-[0-9a-zA-Z]{32}
 SK[0-9a-fA-F]{32}
 AC[a-zA-Z0-9_\-]{32}
@@ -75,113 +75,110 @@ rk_live_[0-9a-zA-Z]{24}
 ey[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$
 \"api_token\":\"(xox[a-zA-Z]-[a-zA-Z0-9-]+)\"
 ([-]+BEGIN [^\s]+ PRIVATE KEY[-]+[\s]*[^-]*[-]+END [^\s]+ PRIVATE KEY[-]+)
-(JEKYLL_GITHUB_TOKEN|JEKYLL_GITHUB_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(SF_USERNAMEsalesforce|SF_USERNAMESALESFORCE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(access_key|ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(access_token|ACCESS_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(amazonaws|AMAZONAWS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(apiSecret|APISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(api_key|API_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(api_secret|API_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(apidocs|APIDOCS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(apikey|APIKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(app_key|APP_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(app_secret|APP_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(appkey|APPKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(appkeysecret|APPKEYSECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(application_key|APPLICATION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(appsecret|APPSECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(appspot|APPSPOT)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(auth|AUTH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(auth_token|AUTH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(authorizationToken|AUTHORIZATIONTOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(aws_access|AWS_ACCESS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(aws_access_key_id|AWS_ACCESS_KEY_ID)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(aws_key|AWS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
+(JEKYLL_GITHUB_TOKEN|JEKYLL_GITHUB_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(SF_USERNAMEsalesforce|SF_USERNAMESALESFORCE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(access_key|ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(access_token|ACCESS_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(amazonaws|AMAZONAWS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(apiSecret|APISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(api_key|API_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(api_secret|API_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(apidocs|APIDOCS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(apikey|APIKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(app_key|APP_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(app_secret|APP_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(appkey|APPKEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(appkeysecret|APPKEYSECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(application_key|APPLICATION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(appsecret|APPSECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(appspot|APPSPOT)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(auth|AUTH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(auth_token|AUTH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(authorizationToken|AUTHORIZATIONTOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(aws_access|AWS_ACCESS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(aws_access_key_id|AWS_ACCESS_KEY_ID)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(aws_key|AWS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
 (aws_secret|AWS_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]7}
-(aws_token|AWS_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(bashrcpassword|BASHRCPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(bucket_password|BUCKET_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(client_secret|CLIENT_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(cloudfront|CLOUDFRONT)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(codecov_token|CODECOV_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(config|CONFIG)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(conn.login|CONN.LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(connectionstring|CONNECTIONSTRING)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(consumer_key|CONSUMER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(credentials|CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(database_password|DATABASE_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(db_password|DB_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(db_username|DB_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(dbpasswd|DBPASSWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(dbpassword|DBPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
+(aws_token|AWS_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(bashrcpassword|BASHRCPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(bucket_password|BUCKET_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(client_secret|CLIENT_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(cloudfront|CLOUDFRONT)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(codecov_token|CODECOV_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(config|CONFIG)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(conn.login|CONN.LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(connectionstring|CONNECTIONSTRING)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(consumer_key|CONSUMER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(credentials|CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(database_password|DATABASE_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(db_password|DB_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(db_username|DB_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(dbpasswd|DBPASSWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(dbpassword|DBPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
 (dbuser|DBUSER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{3}
-(dot-files|DOT-FILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(dotfiles|DOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(encryption_key|ENCRYPTION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(fabricApiSecret|FABRICAPISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(fb_secret|FB_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(firebase|FIREBASE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(ftp|FTP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(gh_token|GH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(github_key|GITHUB_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(github_token|GITHUB_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(gitlab|GITLAB)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(gmail_password|GMAIL_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(gmail_username|GMAIL_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(api.googlemapsAIza|API.GOOGLEMAPSAIZA)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(herokuapp|HEROKUAPP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(internal|INTERNAL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(irc_pass|IRC_PASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(key|KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(keyPassword|KEYPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(ldap_password|LDAP_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(ldap_username|LDAP_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(login|LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(mailchimp|MAILCHIMP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(mailgun|MAILGUN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(master_key|MASTER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(mydotfiles|MYDOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(mysql|MYSQL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(node_env|NODE_ENV)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(npmrc_auth|NPMRC_AUTH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(oauth_token|OAUTH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(pass|PASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(passwd|PASSWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(password|PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(passwords|PASSWORDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(pemprivate|PEMPRIVATE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(preprod|PREPROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(private_key|PRIVATE_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(prod|PROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(pwd|PWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(pwds|PWDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(rds.amazonaws.compassword|RDS.AMAZONAWS.COMPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(redis_password|REDIS_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(root_password|ROOT_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secret|SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secret.password|SECRET.PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secret_access_key|SECRET_ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(secret_key|SECRET_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(secret_token|SECRET_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secrets|SECRETS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(secure|SECURE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(security_credentials|SECURITY_CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(send.keys|SEND.KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{7}
-(send_keys|SEND_KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(sf_username|SF_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(slack_api|SLACK_API)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(slack_token|SLACK_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(sql_password|SQL_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(ssh|SSH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(ssh2_auth_password|SSH2_AUTH_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(sshpass|SSHPASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(staging|STAGING)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(stg|STG)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(storePassword|STOREPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(stripe|STRIPE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(swagger|SWAGGER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(testuser|TESTUSER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5}
-(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)(([\w.-]*)\.([\w]*)\.([A-z]))\w+
-(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)(http|https)
-(next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|/redirect/|cgi-bin/|redirect.cgi|/out/|/out|view=|loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|dest=|redirect=|uri=|path=|continue=|url=|window=|to=|out=|view=|dir=|show=|navigation=|Open=|url=|file=|val=|validate=|domain=|callback=|return=|page=|feed=|host=|port=|next=|data=|reference=|site=)((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+
+(dot-files|DOT-FILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(dotfiles|DOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(encryption_key|ENCRYPTION_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(fabricApiSecret|FABRICAPISECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(fb_secret|FB_SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(firebase|FIREBASE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(ftp|FTP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(gh_token|GH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(github_key|GITHUB_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(github_token|GITHUB_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(gitlab|GITLAB)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(gmail_password|GMAIL_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(gmail_username|GMAIL_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(api.googlemapsAIza|API.GOOGLEMAPSAIZA)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(herokuapp|HEROKUAPP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(internal|INTERNAL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(irc_pass|IRC_PASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(key|KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(keyPassword|KEYPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(ldap_password|LDAP_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(ldap_username|LDAP_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(login|LOGIN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(mailchimp|MAILCHIMP)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(mailgun|MAILGUN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(master_key|MASTER_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(mydotfiles|MYDOTFILES)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(mysql|MYSQL)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(node_env|NODE_ENV)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(npmrc_auth|NPMRC_AUTH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(oauth_token|OAUTH_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(pass|PASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(passwd|PASSWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(password|PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(passwords|PASSWORDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(pemprivate|PEMPRIVATE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(preprod|PREPROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(private_key|PRIVATE_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(prod|PROD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(pwd|PWD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(pwds|PWDS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(rds.amazonaws.compassword|RDS.AMAZONAWS.COMPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(redis_password|REDIS_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(root_password|ROOT_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secret|SECRET)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secret.password|SECRET.PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secret_access_key|SECRET_ACCESS_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secret_key|SECRET_KEY)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secret_token|SECRET_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secrets|SECRETS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(secure|SECURE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(security_credentials|SECURITY_CREDENTIALS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(send.keys|SEND.KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(send_keys|SEND_KEYS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(sf_username|SF_USERNAME)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(slack_api|SLACK_API)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(slack_token|SLACK_TOKEN)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(sql_password|SQL_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(ssh|SSH)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(ssh2_auth_password|SSH2_AUTH_PASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(sshpass|SSHPASS)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(staging|STAGING)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(stg|STG)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(storePassword|STOREPASSWORD)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(stripe|STRIPE)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(swagger|SWAGGER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
+(testuser|TESTUSER)(:|=| : | = )( |"|')[0-9A-Za-z\\-]{5,100}
