@@ -26,7 +26,8 @@ echo "example.com" | waybackurls | httpx > live.txt
 ```
 ```
 python3 JSScanner.py
-Please Enter Js File: (Js file text file)
+Please Enter Any File: text.txt (your links file)
+Path Of Regex/Patten File: regex.txt (your regex file)
 ```
 ## Open redirect 
 
