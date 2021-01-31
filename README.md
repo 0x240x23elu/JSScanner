@@ -48,7 +48,7 @@ Path Of Regex/Patten File: regex.txt (your regex file)
 ```
 https://www.youtube.com/watch?v=hsT5BL_EV-g
 
-[![Watch the video](https://www.youtube.com/watch?v=hsT5BL_EV-g)]
+[![Watch the video](https://www.youtube.com/watch?v=hsT5BL_EV-g)](https://www.youtube.com/watch?v=hsT5BL_EV-g)
 ```
 ## Some Regex 
 ```
