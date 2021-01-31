@@ -2,6 +2,8 @@
 Js File Scanner
 This is Js File Scanner . Which are scan  in js file and  find juicy information Toke,Password Etc.
 
+[![Watch the video](https://img.youtube.com/vi/hsT5BL_EV-g/1.jpg)](https://www.youtube.com/watch?v=hsT5BL_EV-g)
+
 ## Installation :
 ```
 git clone https://github.com/0x240x23elu/JSScanner.git
