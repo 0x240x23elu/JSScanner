@@ -8,7 +8,7 @@ This is Js File Scanner . Which are scan  in js file and  find juicy information
 ```
 git clone https://github.com/0x240x23elu/JSScanner.git
 cd JSScanner
-pip3 install -r  requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Note
@@ -30,6 +30,10 @@ echo "example.com" | waybackurls | httpx > live.txt
 python3 JSScanner.py
 Please Enter Any File: text.txt (your links file)
 Path Of Regex/Patten File: regex.txt (your regex file)
+
+or
+
+python3 JSScanner.py --urls jsfiles.txt --regex regex.txt --output output.txt
 ```
 ## Open redirect 
 

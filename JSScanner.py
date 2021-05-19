@@ -9,10 +9,11 @@ import sys
 import os
 import colored
 from colored import stylize
+import argparse
 urllib3.disable_warnings()
 print(colored.fg("red"), 
      "╔════════════════════════════════════════════════════════════════╗\n"
-      "║                    Devlope By 0x240x23elu                      ║\n"
+      "║                    Developed By 0x240x23elu                      ║\n"
       "║                                                                ║\n"
       "╚════════════════════════════════════════════════════════════════╝")
 print("╔════════════════════════════════════════════════════════════════╗\n"
@@ -40,8 +41,24 @@ print("╔═══════════════════════�
       "║                                                                ║\n"
       "╚════════════════════════════════════════════════════════════════╝")
 
-path = input("Please Enter Any File: ") 
-reg = input("Path Of Regex/Patten File: ")
+parser = argparse.ArgumentParser(usage="python3 JSScanner.py --urls jsfiles.txt --regex regex.txt --output output.txt")
+optional = parser._action_groups.pop()
+optional.add_argument("-u","--urls",help="file including .js urls")
+optional.add_argument("-r","--regex",help="file including regex")
+optional.add_argument("-o","--output",help="output file")
+
+parser._action_groups.append(optional)
+args = parser.parse_args()
+
+path = args.urls
+reg = args.regex
+output = args.output
+
+if path is None:
+    path = input("Please Enter Any File: ") 
+if reg is None:
+    reg = input("Path Of Regex/Patten File: ")
+
 list=[] 
 file1 = open(path, 'r')
 Lines = file1.readlines() 
@@ -76,7 +93,10 @@ for line in Lines:
     
                 print (colored.fg("green") ,"Regex: ",regex)
                 print(colored.fg("red") , "Match {matchNum} was found at: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()), '\n')
-                f = open('out.txt.txt', 'a')
+                if output is None:
+                    f = open('out.txt.txt', 'a')
+                else:
+                    f = open(output, 'a')
                 L = [ip, '\n', "Regex: ", regex, '\n', "Match {matchNum} was found at : {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()),'\n']
                 f.writelines(L)
                 f.close()
