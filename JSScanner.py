@@ -66,7 +66,6 @@ count = 0
 # Strips the newline character
 for line in Lines: 
     ip = line.strip()
-    print(colored.fg("white"), ip)
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             futures = [
@@ -92,6 +91,7 @@ for line in Lines:
             for matchNum, match in enumerate(matches, start=1):
     
                 print (colored.fg("green") ,"Regex: ",regex)
+                print(colored.fg("green"), ip)
                 print(colored.fg("red") , "Match {matchNum} was found at: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()), '\n')
                 if output is None:
                     f = open('out.txt.txt', 'a')
