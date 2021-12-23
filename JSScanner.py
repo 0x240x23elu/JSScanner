@@ -5,7 +5,6 @@ from concurrent import futures
 #import requests as r 
 import re 
 import urllib3 
-import sys 
 import os
 import colored
 from colored import stylize
